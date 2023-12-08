@@ -1,0 +1,594 @@
+/* Dans votre fichier styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcc00;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#hero {
+    margin-left: 35%;
+    text-align: center;
+    padding: 0px;
+    width: 30%;
+}
+
+#hero img {
+    text-align: center;
+
+
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#gallery img {
+    max-width: 30%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin: 50px;
+}
+
+.rotate {
+    animation: rotateAnimation 2s infinite linear;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    margin: 50px;
+}
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    margin: 50px;
+}
+
+.color-change {
+    animation: colorChangeAnimation 2ms infinite alternate;
+}
+
+@keyframes colorChangeAnimation {
+    from {
+        background-color: #2ecc71;
+    }
+    to {
+        background-color: #3c89e7;
+    }
+    
+}
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.animated-text {
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(217, 33, 12);
+    
+}
+
+.animate {
+    animation: textAnimation 2s infinite alternate;
+}
+
+@keyframes textAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+.gradient-background {
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #d1f312);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    width: 150px;
+    height: 250px;
+    background-color: #3498db;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+
+}
+.progress-container {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #2ecc71;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.carousel-container {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+}
+.dynamic-text {
+    text-align: center;
+    margin: 50px auto;
+}
+
+h1 {
+    font-size: 36px;
+    overflow: hidden;
+}
+
+span {
+    color: #e74c3c;
+    display: inline-block;
+    transform: translateY(100%);
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+.typography-animation {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 36px;
+    display: inline-block;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+h2:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #db4534;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotate-on-hover {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(219, 52, 52);
+    transition: transform 0.9s ease-in-out;
+}
+
+.rotate-on-hover:hover {
+    transform: rotate(45deg);
+}
+.toggle-button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-button.active {
+    background-color: #e74c3c;
+}
+
+
+.parallax-image {
+    height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.parallax-image:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Ajouter des styles supplémentaires pour les flèches de navigation si nécessaire */
+
+
+
+
+
+.kingdom {
+    position: relative;
+    height: 100vh;
+    background-color: #87CEEB; /* Ciel bleu */
+}
+
+.castle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.castle img {
+    width: 150px;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 24px;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.7;
+}
+
+.cloud1 {
+    left: 10%;
+    top: 10%;
+    animation-name: moveCloud1;
+}
+
+.cloud2 {
+    right: 10%;
+    top: 20%;
+    animation-name: moveCloud2;
+}
+
+@keyframes moveCloud1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes moveCloud2 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.knight {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    animation: knightAnimation 5s ease-in-out infinite;
+}
+
+@keyframes knightAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+.kingdom {
+    position: relative;
+    height: 100vh;
+    background-color: #001f3f; /* Bleu nuit */
+}
+
+.launchpad {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 150px;
+    background-color: #bdc3c7; /* Gris argenté */
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.rocket {
+    width: 20px;
+    height: 40px;
+    background-color: #e74c3c; /* Rouge */
+    border-radius: 8px;
+    position: relative;
+    animation: takeoff 2s ease-in-out infinite;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('stars.png') repeat 0 0;
+    z-index: 1;
+}
+
+@keyframes takeoff {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+.jungle {
+    position: relative;
+    height: 100vh;
+    background-color: #4CAF50; /* Vert jungle */
+}
+
+.vines {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 100vh;
+    background-color: #8BC34A; /* Vert liane */
+    z-index: 1;
+}
+
+.monkey {
+    width: 40px;
+    height: 40px;
+    background-color: #FFC107; /* Jaune singe */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+.space {
+    position: relative;
+    height: 100vh;
+    background-color: #041f35; /* Espace noir */
+}
+
+.planet {
+    width: 150px;
+    height: 150px;
+    background-color: #6cb6ff; /* Bleu planète */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spaceship {
+    width: 50px;
+    height: 20px;
+    background-color: #ffd700; /* Or vaisseau spatial */
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translate(-50%, -50%);
+    animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(100vw);
+    }
+}
+
+.sky {
+    position: relative;
+    height: 100vh;
+    background-color: #000; /* Fond de ciel noir */
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('stars.png') repeat 0 0;
+    z-index: 1;
+}
+
+.airplane {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db; /* Bleu avion en papier */
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    animation: fly 5s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(25%, -25%) rotate(-45deg);
+    }
+    50% {
+        transform: translate(50%, 0) rotate(0deg);
+    }
+    75% {
+        transform: translate(75%, -25%) rotate(45deg);
+    }
+    100% {
+        transform: translate(100%, 0) rotate(0deg);
+    }
+}
+
